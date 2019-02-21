@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 style="color:blue"align="center"> Make a new blog entry.</h1>
+<form method="post">
+	<style>
+	.error {
+    color: red;
+	
+	}
+	
+	</style>
+    <table align="center">
+        <td align="center">Give your new blog a title:</td>
+		<tr>
+        <label>
+        <td align="center"><input  name="title" type="text"></td>
+        </label>
+        </tr>
+        <tr align="center"><td><p class="error">{{ title_error }}</p></td></tr>
+        <td align="center">Your new blog:</td>
+		<tr>
+        <label>
+        <td><textarea  name="body" rows="10" cols="50"></textarea></td>
+        </label>
+        </tr>
+        <tr><td><p align="center" class="error"> &nbsp; &nbsp; {{ body_error }}</p></td></tr>
+        
+    </table>
+
+<div style="text-align:center">  
+    <input type="submit" value="submit" >  
+</div>
+</form>
+{% endblock %}
